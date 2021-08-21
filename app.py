@@ -3,11 +3,12 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
+counter = 0
+
 @app.route("/")
 def hello():
 	return "hello world <3"
 
-counter = 0
 
 @app.route('/reset')
 def reset():
@@ -15,25 +16,32 @@ def reset():
 	return "counter is: " + str(counter)
 
 @app.route('/counter')
-def counter():
+def get_counter():
+	print("counter is: " + str(counter))
 	return "counter is: " + str(counter)
 
 RESP = {
-	0: "hello izzie",
+	0: "hello izzie, keep messaging me",
 	1: "or should i call you?...",
 	2: "isadora",
 	3: "good morning",
 	4: "wake me up inside"
 }
+
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
     """Respond to incoming calls with a simple text message."""
-    # Start our TwiML response
+    # Start our TwiML response   
+    global counter
     resp = MessagingResponse()
+    print("counter is: " +  str(counter))
     if counter in RESP:
     	msg = RESP[counter]
+    	counter += 1
     else:
-    	msg = "good luck buddy!"
+    	msg = "bye for now 😋"
+    	# Resets.
+    	counter = 0
     # Add a message
     resp.message(msg)
     return str(resp)
