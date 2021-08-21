@@ -3,6 +3,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
+global counter
 counter = 0
 
 @app.route("/")

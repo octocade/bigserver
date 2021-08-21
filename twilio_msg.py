@@ -14,9 +14,10 @@ client = Client(account_sid, auth_token)
 
 message = client.messages \
                 .create(
-                     body="fJoin Earth's mightiest heroes. Like Kevin Bacon.",
+                     body="you sparkle ✨ text me back! 🤖",
                      from_='+15033038791',
-                     to='+61411092996'
+                     # to='+61411092996'
+                     to="+61422497667"
                  )
 
 print(message.sid)
