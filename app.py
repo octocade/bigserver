@@ -28,7 +28,7 @@ RESP = {
 	3: "Just checking in, how is your evening going Tim? 🌇",
 	4: "Would you us to put you through to a counsellor?",
 	5: "Would you to chat with a friend?",
-	6: "You haven't talked to your buddy in a while! They are active https://www.messenger.com/t/1302711535"
+	6: "You haven't talked to your buddy in a while! They are active https://www.messenger.com/t/1302711535",
 	7: "Good night Tim! 😴"
 }
 
