@@ -22,11 +22,14 @@ def get_counter():
 	return "counter is: " + str(counter)
 
 RESP = {
-	0: "hello izzie, keep messaging me",
-	1: "or should i call you?...",
-	2: "isadora",
-	3: "good morning",
-	4: "wake me up inside"
+	0: "Good morning Tim! 🌅",
+	1: "Just checking in, how is your day going Tim?",
+	2: "Great to hear 😊 Keep powering through!",
+	3: "Just checking in, how is your evening going Tim? 🌇",
+	4: "Would you us to put you through to a counsellor?",
+	5: "Would you to chat with a friend?",
+	6: "You haven't talked to your buddy in a while! They are active https://www.messenger.com/t/1302711535"
+	7: "Good night Tim! 😴"
 }
 
 @app.route("/sms", methods=['GET', 'POST'])
