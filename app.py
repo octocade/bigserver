@@ -36,6 +36,12 @@ def sms_reply():
     global counter
     resp = MessagingResponse()
     print("counter is: " +  str(counter))
+
+    # TODO: remove state, used script.
+     # Get the message the user sent our Twilio number
+    body = request.values.get('Body', None)
+    print("Person sent us: " + body)
+
     if counter in RESP:
     	msg = RESP[counter]
     	counter += 1
